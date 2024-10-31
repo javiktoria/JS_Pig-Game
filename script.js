@@ -30,6 +30,7 @@ const init = function () {
   player0El.classList.add('player--active');
   player1El.classList.remove('player--active');
 };
+
 init();
 
 const switchPlayer = function () {
@@ -70,7 +71,7 @@ btnHold.addEventListener('click', function () {
         .classList.add('player--winner');
       document
         .querySelector(`.player--${activePlayer}`)
-        .classList.add('player--active');
+        .classList.remove('player--active');
       diceEl.classList.add('hidden');
     } else {
       switchPlayer();
